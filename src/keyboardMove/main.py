@@ -54,22 +54,22 @@ def main():
             elif ch == 'q':
                 print('Quitting...\r')
             elif ch == 'h':
-                print('Move Camera Left')
+                print('Move Camera Left\r')
                 xCoord -= 20
                 xCoord = 500 if xCoord < 500 else xCoord
                 Board.setPWMServoPulse(2, xCoord, 0.001)
             elif ch == 'j':
-                print('Move Camera Down')
+                print('Move Camera Down\r')
                 yCoord -= 20
                 yCoord = 1000 if yCoord < 1000 else yCoord
                 Board.setPWMServoPulse(1, yCoord, 0.001)
             elif ch == 'k':
-                print('Move Camera Up')
+                print('Move Camera Up\r')
                 yCoord += 20
                 yCoord = 2000 if yCoord > 2000 else yCoord
                 Board.setPWMServoPulse(1, yCoord, 0.001)
             elif ch == 'l':
-                print('Move Camera Right')
+                print('Move Camera Right\r')
                 xCoord += 20
                 xCoord = 2500 if xCoord < 2500 else xCoord
                 Board.setPWMServoPulse(2, xCoord, 0.001)
