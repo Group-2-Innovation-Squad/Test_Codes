@@ -71,7 +71,7 @@ def main():
             elif ch == 'l':
                 print('Move Camera Right\r')
                 xCoord += 20
-                xCoord = 2500 if xCoord < 2500 else xCoord
+                xCoord = 2500 if xCoord > 2500 else xCoord
                 Board.setPWMServoPulse(2, xCoord, 0.001)
         except:
             continue
