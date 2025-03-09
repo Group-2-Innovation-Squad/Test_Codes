@@ -25,7 +25,8 @@ q: Quit\r'''
 def initCamera():
     Board.setPWMServoPulse(1, yCoord, 500)
     Board.setPWMServoPulse(2, xCoord, 500)
-    open_once = yaml_handle.get_yaml_data('/boot/camera_setting.yaml')['open_once'] if open_once:
+    open_once = yaml_handle.get_yaml_data('/boot/camera_setting.yaml')['open_once'] 
+    if open_once:
         my_camera = cv2.VideoCapture('http://127.0.0.1:8080/?action=stream?dummy=param.mjpg')
         return my_camera
     else:
