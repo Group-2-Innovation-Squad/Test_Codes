@@ -85,7 +85,8 @@ def processInput():
 def runningWindow(cam):
     while running:
         ret, frame = cam.read()
-        cv2.imshow('TonyPi Camera', frame)
+        if ret:
+            cv2.imshow('TonyPi Camera', frame)
 
 def main():
     fd, oSet = enterRaw()
