@@ -44,6 +44,7 @@ def exitRaw(fd, oSet):
     termios.tcsetattr(fd, termios.TCSADRAIN, oSet)
 
 def processInput():
+    global running
     while running:
         ch = cv2.waitKey(0)
         if ch == b'w':
